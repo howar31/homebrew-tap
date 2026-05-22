@@ -5,21 +5,21 @@
 class Slk < Formula
   desc "Agent-facing Slack CLI for AI agents."
   homepage "https://github.com/howar31/slk"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/howar31/slk/releases/download/v0.2.0/slk_darwin_amd64.tar.gz"
-      sha256 "01c6ce276ffcf322051dcadc6638384087403ec7b393e804c55169bb5271b222"
+      url "https://github.com/howar31/slk/releases/download/v0.2.1/slk_darwin_amd64.tar.gz"
+      sha256 "686a3dda5b97d90ae56ba22a44f37ab9aef74422ee4faec5ca63ab86169313b5"
 
       define_method(:install) do
         bin.install "slk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/howar31/slk/releases/download/v0.2.0/slk_darwin_arm64.tar.gz"
-      sha256 "65a9f741c2fa320ec6c054be80ca0e0b78101540eef4904add027e832abdedd6"
+      url "https://github.com/howar31/slk/releases/download/v0.2.1/slk_darwin_arm64.tar.gz"
+      sha256 "2c6aff156ee27cfbb1e1bb611557c514da445ad8b2326849e2a022d32d8f6cbc"
 
       define_method(:install) do
         bin.install "slk"
@@ -29,15 +29,15 @@ class Slk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/howar31/slk/releases/download/v0.2.0/slk_linux_amd64.tar.gz"
-      sha256 "4365f4128c18ccf7055d76144151ab335332117fe73a3774ee305c88a4026d9e"
+      url "https://github.com/howar31/slk/releases/download/v0.2.1/slk_linux_amd64.tar.gz"
+      sha256 "a87b333e73cfe5c1e6a1373973c9da3f9824d11904f58b7fdb93feec6dd20ff0"
       define_method(:install) do
         bin.install "slk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/howar31/slk/releases/download/v0.2.0/slk_linux_arm64.tar.gz"
-      sha256 "b4f6956a7086e6d1b10225344dfee370ca1f383c97837e1e23cf99ae266d9367"
+      url "https://github.com/howar31/slk/releases/download/v0.2.1/slk_linux_arm64.tar.gz"
+      sha256 "b287aaf287f46b01416d8b24724dfa010e2b07994198b1aa648444db0185d558"
       define_method(:install) do
         bin.install "slk"
       end
